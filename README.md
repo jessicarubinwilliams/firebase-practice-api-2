@@ -1,0 +1,1 @@
+This project was created primarily by following the very helpful YouTube tutorial [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY).
