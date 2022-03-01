@@ -1,5 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as express from 'express';
+import { addEntry } from './entryController';
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
@@ -7,6 +8,7 @@ import * as express from 'express';
 const app = express();
 
 app.get('/', (request, response) => response.status(200).send('Hey there!'))
+app.post('/entries', addEntry)
 
 exports.app = functions.https.onRequest(app);
 
