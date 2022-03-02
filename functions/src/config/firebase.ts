@@ -10,4 +10,3 @@ const app = admin.initializeApp(firebaseConfig);
 const db = admin.firestore(app);
 
 export default db;
-
