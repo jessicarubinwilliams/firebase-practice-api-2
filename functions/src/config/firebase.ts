@@ -1,5 +1,4 @@
 import * as admin from 'firebase-admin';
-// import * as functions from 'firebase-functions';
 const serviceAccount = require('./../../.firebase/ firebase-functions-adminsdk-private-key.json');
 
 const firebaseConfig = {
