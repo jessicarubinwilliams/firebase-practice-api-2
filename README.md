@@ -2,7 +2,9 @@
 
 This project was originally created by more or less following the YouTube tutorial [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY). There is also a related [written tutorial](https://blog.logrocket.com/rest-api-firebase-cloud-functions-typescript-firestore/) and [GitHub repo](https://github.com/ebenezerdon/journal-rest-api).
 
-It was then further developed by following the YouTube tutorial [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)
+It was then further developed by following additional YouTube tutorials:
+[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)
+[Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo)
 
 ## Tutorials to Revisit:
 
