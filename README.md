@@ -4,6 +4,16 @@ This project was originally created by more or less following the YouTube tutori
 
 It was then further developed by following the YouTube tutorial [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)
 
+## Tutorials to Revisit:
+
+[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)
+20:20-30:10 Get functionality for a single entry, includes query parameters and error handling
+36:00-44:10 Input validatin with [joi](joi.dev) validation library
+44:10-52:30 Update functionality using Put route instead of Patch route
+48:00-48:50 refactor to DRY duplicate input validation code
+52:30-55:23 Delete functionality with input validation
+55:24-57:30 Fix bug in input validation
+
 ## Stretch Goals:
 
 * add esLint dependency
