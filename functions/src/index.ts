@@ -5,9 +5,9 @@ import { addEntry, getAllEntries, updateEntry, deleteEntry } from './entryContro
 const app = express();
 
 app.get('/', (request, response) => response.status(200).send('Hey there!'))
-app.post('/entries', addEntry)
-app.get('/entries', getAllEntries)
-app.patch('/entries/:entryId', updateEntry)
-app.delete('/entries/:entryId', deleteEntry)
+app.post('/api/entries', addEntry)
+app.get('/api/entries', getAllEntries)
+app.patch('/api/entries/:entryId', updateEntry)
+app.delete('/api/entries/:entryId', deleteEntry)
 
 exports.app = functions.https.onRequest(app);
