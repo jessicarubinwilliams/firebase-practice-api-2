@@ -1,5 +1,5 @@
-To run the API on your local server: `npm run serve`
-To deploy the API to Firebase: 
+To run the API on your local server: `$ npm run serve`  
+To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
 ## Tutorials Used:
 
@@ -13,19 +13,45 @@ by following additional YouTube tutorials:
 
 ## Tutorials Notes:
 
-[Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY)  
- 
+[Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY) from Ebenezer Don  
+  
+SETUP   
 2:10-5:15 Create Firebase project  
 5:15-9:00 Set up billing for Firebase functions - deployment  
-9:00-10:25 Set up Firestore database  
+9:00-10:25 Set up Firestore database in _production mode_, not test mode. Database is accessed with ServiceAccount credentials later in video  
 10:25-11:50 Install Node.js & FirebaseTools CLI  
-11:50-14:02 Use CLI to login to Firebase in the terminal `firebase login` & create new Firebase function `firebase init functions`  
-14:03-15:10 Overview of the file structure created by `firebase init functions`  
+11:50-14:02 Use CLI to login to Firebase in the terminal `$ firebase login` & create new Firebase function `$ firebase init functions`  
+14:03-15:10 Overview of the file structure created by `$ firebase init functions`  
 15:10-17:07 Explain, deploy `practice-api-2/functions$ npm run deploy` & test in Postman first Cloud Function (default  `helloWorld()`)  
-17:07- Introduce & set up Express.js Middleware
+--Related Firebase Documentation: [Manage functions deployment and runtime options](https://firebase.google.com/docs/functions/manage-functions)
+17:07-19:05 Introduce & set up Express.js Middleware  
+19:06-20:29 Explain, deploy & test in Postman first original/non-default Cloud Function (`app()`)  
+20:30-29:30 Create Firebase service account to access the Firestore database with the Firebase Admin SDK & link express app to Firebase/Firestore  
+--This set up is out of date but still helpful to watch. After much trial & error, I used these additioanal resources to link the express app to Firebase/Firestore: Firebase Docs [Add the Firebase Admin SDK to your server ](https://firebase.google.com/docs/admin/setup) & [Configure your environment ](https://firebase.google.com/docs/functions/config-env) and Medium articles [Configuring Firebase Admin SDK with Express](https://medium.com/@tanya/configuring-firebase-admin-sdk-with-express-931b02ee2f91) & Medium article [Firebase: Separating configuration from code in Admin SDK](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)  
+29:31-31:41 Create controller  
 
+CREATE  
+31:42-37:15 Add Create functionality to controller with try-catch error handling - `addEntry()`  
+37:15-37:08 Add Create functionality to index.ts - add post route  
+37:55 & 59:27 both mention need to add custom validation (e.g. checks whether an entry exists before trying to update it, check whether a users inputs are present and appropriate), authentication & authorization middleware and where that would go in the code  
+38:08 Redploy application & test in Postman  
+40:53 Demo in Postman why the custom validation of user input is needed  
+41:04 View new data in Firestore database  
+  
+GET - getAll() only, no get()  
+41:53 Add Get functionality to controller with try-catch error handling - `getAllEntries()`  
+45:04 Add Get functionality to index.ts - add get route  
+45:25 Redploy application & test in Postman
+46:53 Update `getAllEntries()` to preparse the Firestore response and only return wanted data to the user of our API
+49:31 Redploy application to Firebase & test in Postman
+  
+UPDATE  & DELETE  
+49:57 Add Update functionality to controller with try-catch error handling - `updateEntry()`  
+54:38 Add Delete functionality to controllwer with try-catch error handling - `deleteEntry()`  
+55:57 Add Update & Delete functionality to index.ts -add patch & delete routes  
+56:57 Redploy application to Firebase & test in Postman
 
-[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)  
+[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) from Programming with Mosh  
 20:20-30:10 Get functionality for a single entry, includes query parameters and error handling  
 36:00-44:10 Input validatin with [joi](joi.dev) validation library  
 44:10-52:30 Update functionality using Put route instead of Patch route  
@@ -33,7 +59,7 @@ by following additional YouTube tutorials:
 52:30-55:23 Delete functionality with input validation  
 55:24-57:30 Fix bug in input validation  
 
-[Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo)
+[Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo) from Mahesh Kariya  
 
 Makes MVC(MRC?) architecture more clear but does not deploy to Firebase (does use Firestore database)
  
@@ -88,7 +114,7 @@ DELETE
 --38:20 `controllers/user.js` delete()  
 --39:02 test  
 
-[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) 
+[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) from Soren Spangsberg Jorgensen
 
 [03 - Basic Structure in JS Web App](https://youtu.be/XY5WCkgVfPk)  
 4:30 import cors from firebase-functions
