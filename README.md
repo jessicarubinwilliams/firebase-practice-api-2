@@ -1,5 +1,5 @@
-To run the API on your local server: `$ npm run serve`
-To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`
+To run the API on your local server: `$ npm run serve`  
+To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
 ## Tutorials Used:
 
@@ -18,7 +18,7 @@ by following additional YouTube tutorials:
 SETUP   
 2:10-5:15 Create Firebase project  
 5:15-9:00 Set up billing for Firebase functions - deployment  
-9:00-10:25 Set up Firestore database  
+9:00-10:25 Set up Firestore database in _production mode_, not test mode. Database is accessed with ServiceAccount credentials later in video  
 10:25-11:50 Install Node.js & FirebaseTools CLI  
 11:50-14:02 Use CLI to login to Firebase in the terminal `$ firebase login` & create new Firebase function `$ firebase init functions`  
 14:03-15:10 Overview of the file structure created by `$ firebase init functions`  
@@ -31,16 +31,25 @@ SETUP
 29:31-31:41 Create controller  
 
 CREATE  
-31:42-37:15 Add Create functionality to controller - `addEntry()`  
+31:42-37:15 Add Create functionality to controller with try-catch error handling - `addEntry()`  
 37:15-37:08 Add Create functionality to index.ts - add post route  
-37:55 Mentions need to add custom validation (e.g. checks whether an entry exists before trying to update it, check whether a users inputs are present and appropriate), authentication & authorization middleware and where that would go in the code  
+37:55 & 59:27 both mention need to add custom validation (e.g. checks whether an entry exists before trying to update it, check whether a users inputs are present and appropriate), authentication & authorization middleware and where that would go in the code  
 38:08 Redploy application & test in Postman  
 40:53 Demo in Postman why the custom validation of user input is needed  
 41:04 View new data in Firestore database  
   
-GET  
-41:53 Add Get functionality to controller - `getAllEntries()`
-
+GET - getAll() only, no get()  
+41:53 Add Get functionality to controller with try-catch error handling - `getAllEntries()`  
+45:04 Add Get functionality to index.ts - add get route  
+45:25 Redploy application & test in Postman
+46:53 Update `getAllEntries()` to preparse the Firestore response and only return wanted data to the user of our API
+49:31 Redploy application to Firebase & test in Postman
+  
+UPDATE  & DELETE  
+49:57 Add Update functionality to controller with try-catch error handling - `updateEntry()`  
+54:38 Add Delete functionality to controllwer with try-catch error handling - `deleteEntry()`  
+55:57 Add Update & Delete functionality to index.ts -add patch & delete routes  
+56:57 Redpoly application to Firebase & test in Postman
 
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) from Programming with Mosh  
 20:20-30:10 Get functionality for a single entry, includes query parameters and error handling  
