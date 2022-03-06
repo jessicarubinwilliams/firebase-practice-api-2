@@ -123,6 +123,12 @@ DELETE
 
 CREATE  
 3:45 Create Functionality  
+7:56 Deploy to local server & test in Postman  
+
+READ  
+[05 - Read Product Route](https://youtu.be/VBToNDd5GUQ)  
+0:37 get() for a single entry
+
 
 
 
