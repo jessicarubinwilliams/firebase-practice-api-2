@@ -11,10 +11,14 @@ type Request = {
   params: { entryId: string }
 }
 
+//See Express.js doucmentatin on Basic Routing to understand the syntax of the functions below https://expressjs.com/en/starter/basic-routing.html & https://expressjs.com/en/guide/routing.html
+
 //Create
 const addEntry = async (req: Request, res: Response) => {
   const { title, text } = req.body
   try {
+    //access the Firestore database and add a new entry to the entries collection with the .doc()
+    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data
     const entry = db.collection('entries').doc()
     const entryObject = {
       id: entry.id,
