@@ -25,9 +25,9 @@ by following additional YouTube tutorials:
 --Related Firebase Documentation: [Manage functions deployment and runtime options](https://firebase.google.com/docs/functions/manage-functions)
 17:07-19:05 Introduce & set up Express.js Middleware  
 19:06-20:29 Explain, deploy & test in Postman first original/non-default Cloud Function (`app()`)  
-20:30-29:30 Create Firebase service account to access the Firestore database with the Firebase Admin SDK & link express app to Firebase/Firestore
---This set up is out of date but still helpful to watch. After much trial & error, I used these additioanal resources to link the express app to Firebase/Firestore: Firebase Docs [Add the Firebase Admin SDK to your server ](https://firebase.google.com/docs/admin/setup) & [Configure your environment ](https://firebase.google.com/docs/functions/config-env), Medium article [Configuring Firebase Admin SDK with Express](https://medium.com/@tanya/configuring-firebase-admin-sdk-with-express-931b02ee2f91), Medium article [Firebase: Separating configuration from code in Admin SDK](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6),
-
+20:30-29:30 Create Firebase service account to access the Firestore database with the Firebase Admin SDK & link express app to Firebase/Firestore  
+--This set up is out of date but still helpful to watch. After much trial & error, I used these additioanal resources to link the express app to Firebase/Firestore: Firebase Docs [Add the Firebase Admin SDK to your server ](https://firebase.google.com/docs/admin/setup) & [Configure your environment ](https://firebase.google.com/docs/functions/config-env) and Medium articles [Configuring Firebase Admin SDK with Express](https://medium.com/@tanya/configuring-firebase-admin-sdk-with-express-931b02ee2f91) & Medium article [Firebase: Separating configuration from code in Admin SDK](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)  
+29:31-
 
 
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) from Programming with Mosh  
