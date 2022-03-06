@@ -13,6 +13,18 @@ by following additional YouTube tutorials:
 
 ## Tutorials Notes:
 
+[Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY)  
+ 
+2:10-5:15 Create Firebase project  
+5:15-9:00 Set up billing for Firebase functions - deployment  
+9:00-10:25 Set up Firestore database  
+10:25-11:50 Install Node.js & FirebaseTools CLI  
+11:50-14:02 Use CLI to login to Firebase in the terminal `firebase login` & create new Firebase function `firebase init functions`  
+14:03-15:10 Overview of the file structure created by `firebase init functions`  
+15:10-17:07 Explain, deploy `practice-api-2/functions$ npm run deploy` & test in Postman first Cloud Function (default  `helloWorld()`)  
+17:07- Introduce & set up Express.js Middleware
+
+
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)  
 20:20-30:10 Get functionality for a single entry, includes query parameters and error handling  
 36:00-44:10 Input validatin with [joi](joi.dev) validation library  
