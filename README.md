@@ -114,10 +114,16 @@ DELETE
 --38:20 `controllers/user.js` delete()  
 --39:02 test  
 
-[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) from Soren Spangsberg Jorgensen
-
+[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) from Soren Spangsberg Jorgensen  
 [03 - Basic Structure in JS Web App](https://youtu.be/XY5WCkgVfPk)  
-4:30 import cors from firebase-functions
+4:30 import cors into index.js  
+[04 - Create Route and Service Account](https://youtu.be/dKoQnNylxm8)  
+0:45 Authenticate the app in Firebase with Firebase Admin SDK. DOES NOT USE .env  
+2:53 enable cors  
+
+CREATE  
+3:45 Create Functionality  
+
 
 
 ## More Tutorials to Check Out in the Future
