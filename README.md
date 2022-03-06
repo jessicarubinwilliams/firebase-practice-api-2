@@ -1,3 +1,6 @@
+To run the API on your local server: `npm run serve`
+To deploy the API to Firebase: 
+
 ## Tutorials Used:
 
 This project was originally created by more or less following the YouTube tutorial [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY). There is also a related [written tutorial](https://blog.logrocket.com/rest-api-firebase-cloud-functions-typescript-firestore/) and [GitHub repo](https://github.com/ebenezerdon/journal-rest-api).  
@@ -6,6 +9,7 @@ It was then further developed
 by following additional YouTube tutorials:  
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)  
 [Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo)  
+[Building a RESTful API with Cloud Functions and Firestore](https://youtu.be/XY5WCkgVfPk)  
 
 ## Tutorials Notes:
 
@@ -71,6 +75,15 @@ DELETE
 --38:15 `routes/user.js` delete()  
 --38:20 `controllers/user.js` delete()  
 --39:02 test  
+
+[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) 
+
+[03 - Basic Structure in JS Web App](https://youtu.be/XY5WCkgVfPk)  
+4:30 import cors from firebase-functions
+
+
+## More Tutorials to Check Out in the Future
+[Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)
 
 ## Stretch Goals:
 
