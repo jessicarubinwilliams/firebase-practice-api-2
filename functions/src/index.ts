@@ -7,7 +7,7 @@ const app = express();
 
 //Automatically allow cros-origin requests
 //See relevant Firebase documentation https://firebase.google.com/docs/functions/http-events
-app.use(cors({ origin: true }));
+app.use(cors( { origin: true } ));
 
 // Enable CORS using the `cors` express middleware.
 cors(request, response, () => {
