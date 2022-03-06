@@ -13,7 +13,19 @@ by following additional YouTube tutorials:
 
 ## Tutorials Notes:
 
-[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48)  
+[Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY) from Ebenezer Don  
+ 
+2:10-5:15 Create Firebase project  
+5:15-9:00 Set up billing for Firebase functions - deployment  
+9:00-10:25 Set up Firestore database  
+10:25-11:50 Install Node.js & FirebaseTools CLI  
+11:50-14:02 Use CLI to login to Firebase in the terminal `firebase login` & create new Firebase function `firebase init functions`  
+14:03-15:10 Overview of the file structure created by `firebase init functions`  
+15:10-17:07 Explain, deploy `practice-api-2/functions$ npm run deploy` & test in Postman first Cloud Function (default  `helloWorld()`)  
+17:07- Introduce & set up Express.js Middleware
+
+
+[How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) from Programming with Mosh  
 20:20-30:10 Get functionality for a single entry, includes query parameters and error handling  
 36:00-44:10 Input validatin with [joi](joi.dev) validation library  
 44:10-52:30 Update functionality using Put route instead of Patch route  
@@ -21,7 +33,7 @@ by following additional YouTube tutorials:
 52:30-55:23 Delete functionality with input validation  
 55:24-57:30 Fix bug in input validation  
 
-[Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo)
+[Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo) from Mahesh Kariya  
 
 Makes MVC(MRC?) architecture more clear but does not deploy to Firebase (does use Firestore database)
  
@@ -76,7 +88,7 @@ DELETE
 --38:20 `controllers/user.js` delete()  
 --39:02 test  
 
-[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) 
+[Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) from Soren Spangsberg Jorgensen
 
 [03 - Basic Structure in JS Web App](https://youtu.be/XY5WCkgVfPk)  
 4:30 import cors from firebase-functions
