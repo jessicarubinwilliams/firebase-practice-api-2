@@ -15,11 +15,13 @@ type Request = {
 
 //Create
 const addEntry = async (req: Request, res: Response) => {
+  //object destructuring
   const { title, text } = req.body
   try {
     //access the Firestore database and add a new entry to the entries collection with the .doc()
     //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data
     const entry = db.collection('entries').doc()
+    //In the line above we're actually creating a document with just and auto assigned id in the entries collection and then updating that document to include title and text below
     const entryObject = {
       id: entry.id,
       title,
@@ -27,19 +29,31 @@ const addEntry = async (req: Request, res: Response) => {
     }
     
     await entry.set(entryObject)
-    
+    //.send() is an express.js method
     res.status(200).send({
       status: 'success',
       message: 'entry added succesfully',
       data: entryObject
     })
-  } catch(error) {
+  } catch (error) {
+    //Soren Jorgensen Tutorial uses express's .send() instead of .json() See the express documentation http://expressjs.com/en/5x/api.html#res.send http://expressjs.com/en/5x/api.html#res.json
     res.status(500).json(error.message)
-  }
+    }
 }
 
 // Read
 const getAllEntries = async (req: Request, res: Response) => {
+  try {
+    const allEntries: EntryType[] = []
+    const querySnapshot = await db.collection('entries').get()
+    querySnapshot.forEach((doc: any) => allEntries.push(doc.data()))
+    return res.status(200).json(allEntries)
+  } catch(error) { 
+    return res.status(500).json(error.message)
+  }
+}
+
+const getEntry = async (req: Request, res: Response) => {
   try {
     const allEntries: EntryType[] = []
     const querySnapshot = await db.collection('entries').get()
