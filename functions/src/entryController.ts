@@ -11,6 +11,7 @@ type Request = {
   params: { entryId: string }
 }
 
+//Create
 const addEntry = async (req: Request, res: Response) => {
   const { title, text } = req.body
   try {
@@ -20,9 +21,9 @@ const addEntry = async (req: Request, res: Response) => {
       title,
       text
     }
-
+    
     await entry.set(entryObject)
-
+    
     res.status(200).send({
       status: 'success',
       message: 'entry added succesfully',
@@ -33,6 +34,7 @@ const addEntry = async (req: Request, res: Response) => {
   }
 }
 
+// Read
 const getAllEntries = async (req: Request, res: Response) => {
   try {
     const allEntries: EntryType[] = []
@@ -44,25 +46,26 @@ const getAllEntries = async (req: Request, res: Response) => {
   }
 }
 
+//Update
 const updateEntry = async (req: Request, res: Response) => {
   const { body: { text, title }, params: { entryId } } = req
-
+  
   try {
     const entry = db.collection('entries').doc(entryId)
     const currentData = (await entry.get()).data() || {}
-
+    
     const entryObject = {
       title: title || currentData.title,
       text: text || currentData.text,
     }
-
+    
     await entry.set(entryObject).catch(error => {
       return res.status(400).json({
         status: 'error',
         message: error.message
       })
     })
-
+    
     return res.status(200).json({
       status: 'success',
       message: 'entry updated successfully',
@@ -74,19 +77,20 @@ const updateEntry = async (req: Request, res: Response) => {
   }
 }
 
+//Delete
 const deleteEntry = async (req: Request, res: Response) => {
   const { entryId } = req.params
-
+  
   try {
     const entry = db.collection('entries').doc(entryId)
-
+    
     await entry.delete().catch(error => {
       return res.status(400).json({
         status: 'error',
         message: error.message
       })
     })
-
+    
     return res.status(200).json({
       status: 'success',
       message: 'entry deleted successfully'
