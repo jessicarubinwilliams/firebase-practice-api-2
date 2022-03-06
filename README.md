@@ -15,6 +15,7 @@ by following additional YouTube tutorials:
 
 [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY) from Ebenezer Don  
   
+SETUP   
 2:10-5:15 Create Firebase project  
 5:15-9:00 Set up billing for Firebase functions - deployment  
 9:00-10:25 Set up Firestore database  
@@ -27,7 +28,18 @@ by following additional YouTube tutorials:
 19:06-20:29 Explain, deploy & test in Postman first original/non-default Cloud Function (`app()`)  
 20:30-29:30 Create Firebase service account to access the Firestore database with the Firebase Admin SDK & link express app to Firebase/Firestore  
 --This set up is out of date but still helpful to watch. After much trial & error, I used these additioanal resources to link the express app to Firebase/Firestore: Firebase Docs [Add the Firebase Admin SDK to your server ](https://firebase.google.com/docs/admin/setup) & [Configure your environment ](https://firebase.google.com/docs/functions/config-env) and Medium articles [Configuring Firebase Admin SDK with Express](https://medium.com/@tanya/configuring-firebase-admin-sdk-with-express-931b02ee2f91) & Medium article [Firebase: Separating configuration from code in Admin SDK](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)  
-29:31-
+29:31-31:41 Create controller  
+
+CREATE  
+31:42-37:15 Add Create functionality to controller - `addEntry()`  
+37:15-37:08 Add Create functionality to index.ts - add post route  
+37:55 Mentions need to add custom validation (e.g. checks whether an entry exists before trying to update it, check whether a users inputs are present and appropriate), authentication & authorization middleware and where that would go in the code  
+38:08 Redploy application & test in Postman  
+40:53 Demo in Postman why the custom validation of user input is needed  
+41:04 View new data in Firestore database  
+  
+GET  
+41:53 Add Get functionality to controller - `getAllEntries()`
 
 
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) from Programming with Mosh  
