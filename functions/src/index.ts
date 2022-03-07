@@ -5,14 +5,9 @@ import { addEntry, getAllEntries, getEntry, updateEntry, deleteEntry } from './e
 
 const app = express();
 
-//Automatically allow cros-origin requests
+//Automatically allow cross-origin requests
 //See relevant Firebase documentation https://firebase.google.com/docs/functions/http-events
 app.use(cors( { origin: true } ));
-
-// // Enable CORS using the `cors` express middleware.
-// cors(request, response, () => {
-//   // ...
-// });
 
 //Routes
 app.get('/', (request, response) => response.status(200).send('Please note this API\'s routing is `api/entries`'))
