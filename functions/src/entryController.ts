@@ -102,7 +102,7 @@ const updateEntry = async (req: Request, res: Response) => {
 //Delete
 const deleteEntry = async (req: Request, res: Response) => {
   const { entryId } = req.params
-  
+  //See Firebase documentation for .delete() https://firebase.google.com/docs/firestore/manage-data/delete-data
   try {
     const entry = db.collection('entries').doc(entryId)
     
