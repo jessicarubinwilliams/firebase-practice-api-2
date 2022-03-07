@@ -162,9 +162,9 @@ DEPLOY TO FIREBASE
 1:43 Test in Postman
 
 ## More Tutorials to Check Out in the Future  
-[Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)
+[Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)  
 Try catch blocks in Typescript online articles: [Get a catch block error message with TypeScript](https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript), [How to strongly type try/catch blocks in TypeScript](https://medium.com/geekculture/how-to-strongly-type-try-catch-blocks-in-typescript-4681aff406b9), [Try Catch Statement in TypeScript
-](https://www.c-sharpcorner.com/UploadFile/5089e0/try-catch-statement-in-typescript/)
+](https://www.c-sharpcorner.com/UploadFile/5089e0/try-catch-statement-in-typescript/)  
 
 ## Stretch Goals:
 
