@@ -19,7 +19,7 @@ const addEntry = async (req: Request, res: Response) => {
   const { title, text } = req.body
   try {
     //access the Firestore database and add a new entry to the entries collection with the .doc()
-    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data for info on Firebase's .doc()
+    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data for info on Firebase's .doc() as well as .collection()
     const entry = db.collection('entries').doc()
     //In the line above we're actually creating a document with just and auto assigned id in the entries collection and then updating that document to include title and text below
     const entryObject = {
@@ -45,7 +45,8 @@ const addEntry = async (req: Request, res: Response) => {
 const getAllEntries = async (req: Request, res: Response) => {
   try {
     const allEntries: EntryType[] = []
-    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .get()
+    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .collection, .get(), .data()
+    //See the Express.js on .json() http://expressjs.com/en/api.html#res.json
     const querySnapshot = await db.collection('entries').get()
     querySnapshot.forEach((doc: any) => allEntries.push(doc.data()))
     return res.status(200).json(allEntries)
@@ -70,7 +71,7 @@ const getEntry = async (req: Request, res: Response) => {
 //Update
 const updateEntry = async (req: Request, res: Response) => {
   const { body: { text, title }, params: { entryId } } = req
-  
+  //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data for info on Firebase's .collection(), .doc(), .data(), .set() & .update()
   try {
     const entry = db.collection('entries').doc(entryId)
     const currentData = (await entry.get()).data() || {}
@@ -79,7 +80,7 @@ const updateEntry = async (req: Request, res: Response) => {
       title: title || currentData.title,
       text: text || currentData.text,
     }
-    
+    //Soren Jorgensen tutorial uses .update() instead of .set()
     await entry.set(entryObject).catch(error => {
       return res.status(400).json({
         status: 'error',
