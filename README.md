@@ -40,8 +40,10 @@ CREATE
   
 GET - getAll() only, no get()  
 41:53 Add Get functionality to controller with try-catch error handling - `getAllEntries()`  
+44:55 Screen shot of `entryController.ts` code for `getAll()` before we preparse the Firebase return. Uses Firebase's .get() to get all the entries and then uses Firebase's .docs() to return an array of all the documents in the QuerrySnapshot. See relevant [Firebase documentation](https://firebase.google.com/docs/reference/node/firebase.firestore.QuerySnapshot#docs)   
 45:04 Add Get functionality to index.ts - add get route  
 45:25 Redploy application & test in Postman
+46:00 Screenshot of the original return from Firebase before we preparse it - includes the document's id at this point  
 46:53 Update `getAllEntries()` to preparse the Firestore response and only return wanted data to the user of our API
 49:31 Redploy application to Firebase & test in Postman
   
