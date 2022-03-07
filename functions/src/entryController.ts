@@ -54,11 +54,13 @@ const getAllEntries = async (req: Request, res: Response) => {
 }
 
 const getEntry = async (req: Request, res: Response) => {
+  const { params: { entryId } } = req
   try {
-    const allEntries: EntryType[] = []
-    const querySnapshot = await db.collection('entries').get()
-    querySnapshot.forEach((doc: any) => allEntries.push(doc.data()))
-    return res.status(200).json(allEntries)
+
+    const document = db.collection('entries').doc(entryId)
+    const entry = await document.get();
+    const response = entry.data();
+    return res.status(200).json(response)
   } catch(error) { 
     return res.status(500).json(error.message)
   }
@@ -119,4 +121,4 @@ const deleteEntry = async (req: Request, res: Response) => {
   }
 }
 
-export { addEntry, getAllEntries, updateEntry, deleteEntry };
+export { addEntry, getAllEntries, getEntry, updateEntry, deleteEntry };
