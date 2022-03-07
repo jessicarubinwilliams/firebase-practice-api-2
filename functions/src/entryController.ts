@@ -11,15 +11,15 @@ type Request = {
   params: { entryId: string }
 }
 
-//See Express.js doucmentatin on Basic Routing to understand the syntax of the functions below https://expressjs.com/en/starter/basic-routing.html & https://expressjs.com/en/guide/routing.html
+//See Express.js documentation on Basic Routing to understand the syntax of the functions below https://expressjs.com/en/starter/basic-routing.html & https://expressjs.com/en/guide/routing.html
 
 //Create
 const addEntry = async (req: Request, res: Response) => {
-  //object destructuring
+  //object destructuring syntax
   const { title, text } = req.body
   try {
     //access the Firestore database and add a new entry to the entries collection with the .doc()
-    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data
+    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data for info on Firebase's .doc()
     const entry = db.collection('entries').doc()
     //In the line above we're actually creating a document with just and auto assigned id in the entries collection and then updating that document to include title and text below
     const entryObject = {
@@ -29,14 +29,14 @@ const addEntry = async (req: Request, res: Response) => {
     }
     
     await entry.set(entryObject)
-    //.send() is an express.js method
+    //.send() is an express.js method http://expressjs.com/en/api.html#res.send
     res.status(200).send({
       status: 'success',
       message: 'entry added succesfully',
       data: entryObject
     })
   } catch (error) {
-    //Soren Jorgensen Tutorial uses express's .send() instead of .json() See the express documentation http://expressjs.com/en/5x/api.html#res.send http://expressjs.com/en/5x/api.html#res.json
+    //Soren Jorgensen Tutorial uses express's .send() instead of .json() See the express documentation http://expressjs.com/en/api.html#res.send http://expressjs.com/en/api.html#res.json
     res.status(500).json(error.message)
     }
 }
@@ -45,6 +45,7 @@ const addEntry = async (req: Request, res: Response) => {
 const getAllEntries = async (req: Request, res: Response) => {
   try {
     const allEntries: EntryType[] = []
+    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .get()
     const querySnapshot = await db.collection('entries').get()
     querySnapshot.forEach((doc: any) => allEntries.push(doc.data()))
     return res.status(200).json(allEntries)
