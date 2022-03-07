@@ -146,6 +146,7 @@ UPDATE & DELETE
 DEPLOY TO FIREBASE
 [08 - Deploy and re-test with Postman](https://youtu.be/iENCphlznek)
 0:10 Deploy using Firebase CLI - no set up instructions offered, see Ebenezer Don's video
+1:43 Test in Postman
 
 ## More Tutorials to Check Out in the Future  
 [Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)
