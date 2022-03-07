@@ -115,30 +115,38 @@ DELETE
 --39:02 test  
 
 [Building a RESTful API with Cloud Functions and Firestore Play List](https://youtu.be/XY5WCkgVfPk) from Soren Spangsberg Jorgensen  
+  
+SETUP  
 [03 - Basic Structure in JS Web App](https://youtu.be/XY5WCkgVfPk)  
 4:30 import cors into index.js  
 [04 - Create Route and Service Account](https://youtu.be/dKoQnNylxm8)  
 0:45 Authenticate the app in Firebase with Firebase Admin SDK. DOES NOT USE .env  
 2:53 enable cors  
-
+  
 CREATE  
 3:45 Create Functionality  
 7:56 Deploy to local server & test in Postman  
-
+  
 READ  
 [05 - Read Product Route](https://youtu.be/VBToNDd5GUQ)  
-0:37 `get()` for a single entry
-2:57 Deploy to local server & test in Postman
+0:37 `get()` for a single entry  
+2:57 Deploy to local server & test in Postman  
+[06 - Read all Products Route](https://youtu.be/KXLOs2J6ypM)  
+0:16 `getAll()` for all entries  
+4:28 review of what each section of code within `getAll()` does  
+5:27 Deploy to local server & test in Postman  
+
+UPDATE & DELETE  
+[07 - Update and Delete Product Routes](https://youtu.be/eeGc9SpoWC4)  
 
 
-
-
-## More Tutorials to Check Out in the Future
-[Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)
+## More Tutorials to Check Out in the Future  
+[Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)  
 
 ## Stretch Goals:
 
 * add esLint dependency
+* Update the syntax of all the Firebase methods from that of Web version 8 which is namespaced (as was demonstrated in all the video tutorials) to the syntax of Web verion 9 which is modular. See the [Firebase documentation](https://firebase.google.com/docs/firestore/query-data/get-data#web-version-9)
 * functions/src/config/firebase.ts: Figure out how to use ES6 import statement rather than require for the Firebase Functions Admin SDK Private Key .json file
 * functions/src/index.ts: add custom validation (e.g. checks whether an entry exists before trying to update it, check whether a users inputs are present and appropriate), authentication & authorization middleware for post route as mentioned at 37:55 and again at 59:05. The video author suggests [his article on Handling user authentication with Firebase](https://blog.logrocket.com/user-authentication-firebase-react-apps/) in your React apps even though this isn't a React app.
 * functions/src/entryController.ts: Add more custom middleware validation for the APIs create route for calls that don't include all the required fields. Currently the API returns a 500 error but it should return a user input error. This should be caught with middleware before it is even sent to Firestore. This suggestion is made in the video at 40:15.
