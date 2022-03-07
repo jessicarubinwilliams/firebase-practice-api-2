@@ -138,7 +138,14 @@ READ
 
 UPDATE & DELETE  
 [07 - Update and Delete Product Routes](https://youtu.be/eeGc9SpoWC4)  
+0:32 `update()`  
+2:57 Deploy to local server & test in Postman  
+5:07 `delete()`  
+6:17 Deploy to local server & test in Postman  
 
+DEPLOY TO FIREBASE
+[08 - Deploy and re-test with Postman](https://youtu.be/iENCphlznek)
+0:10 Deploy using Firebase CLI - no set up instructions offered, see Ebenezer Don's video
 
 ## More Tutorials to Check Out in the Future  
 [Cloud functions for Firebase - Complete Tutorial (incl. Firebase Emulator)](https://youtu.be/gA6WGYQWrKc)
