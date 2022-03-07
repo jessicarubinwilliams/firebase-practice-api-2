@@ -57,9 +57,9 @@ const getEntry = async (req: Request, res: Response) => {
   const { params: { entryId } } = req
   try {
 
-    const document = db.collection('entries').doc(entryId)
-    const entry = await document.get();
-    const response = entry.data();
+    const entry = db.collection('entries').doc(entryId)
+    const querySnapshot = await entry.get();
+    const response = querySnapshot.data();
     return res.status(200).json(response)
   } catch(error) { 
     return res.status(500).json(error.message)
