@@ -1,6 +1,13 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
+## Key Firebase Documentation for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
+_Suggested way to proceed with the Firebase Docs if trying to learn how to do what this project does: start with these and then work your way out by clicking links that interest you within these articles_  
+[Firebase Hosting - Introduction](https://firebase.google.com/docs/hosting)  
+[Firebase Hosting - Get Started](https://firebase.google.com/docs/hosting/quickstart)  
+[Serve dynamic content and host microservices using Firebase Hosting - Overview](https://firebase.google.com/docs/hosting/serverless-overview)  
+[Serve dynamic content and host microservices using Firebase Hosting - Use Cloug Functions for Firebase](https://firebase.google.com/docs/hosting/functions)  
+
 ## Tutorials Used:
 
 This project was originally created by more or less following the YouTube tutorial [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY). There is also a related [written tutorial](https://blog.logrocket.com/rest-api-firebase-cloud-functions-typescript-firestore/) and [GitHub repo](https://github.com/ebenezerdon/journal-rest-api).  
