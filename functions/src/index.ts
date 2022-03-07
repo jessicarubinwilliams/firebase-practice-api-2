@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 const cors = require('cors');
-import { addEntry, getAllEntries, updateEntry, deleteEntry } from './entryController';
+import { addEntry, getAllEntries, getEntry, updateEntry, deleteEntry } from './entryController';
 
 const app = express();
 
@@ -9,11 +9,12 @@ const app = express();
 //See relevant Firebase documentation https://firebase.google.com/docs/functions/http-events
 app.use(cors( { origin: true } ));
 
-// Enable CORS using the `cors` express middleware.
-cors(request, response, () => {
-  // ...
-});
+// // Enable CORS using the `cors` express middleware.
+// cors(request, response, () => {
+//   // ...
+// });
 
+//Routes
 app.get('/', (request, response) => response.status(200).send('Please note this API\'s routing is `api/entries`'))
 
 //Create
@@ -21,6 +22,7 @@ app.post('/api/entries', addEntry)
 
 //Read
 app.get('/api/entries', getAllEntries)
+app.get('/api/entries/:entryId', getEntry)
 
 //Update
 app.patch('/api/entries/:entryId', updateEntry)
