@@ -9,7 +9,7 @@ _Important note: I didn't understand the official Firebase documentation nearly 
 [Firebase Hosting - Introduction](https://firebase.google.com/docs/hosting)  
 [Firebase Hosting - Get Started](https://firebase.google.com/docs/hosting/quickstart)  
 [Serve dynamic content and host microservices using Firebase Hosting - Overview](https://firebase.google.com/docs/hosting/serverless-overview)  
-[Serve dynamic content and host microservices using Firebase Hosting - Use Cloug Functions for Firebase](https://firebase.google.com/docs/hosting/functions)  
+[Serve dynamic content and host microservices using Firebase Hosting - Use Cloud Functions for Firebase](https://firebase.google.com/docs/hosting/functions)  
 [Cloud Functions - Call functions via HTTP requests](https://firebase.google.com/docs/functions/http-events)
 
 ## Tutorials Used:
