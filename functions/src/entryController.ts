@@ -43,12 +43,20 @@ const addEntry = async (req: Request, res: Response) => {
 
 // Read
 const getAllEntries = async (req: Request, res: Response) => {
+  //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .collection, .get(), .data()
+  //See the Express.js on .json() http://expressjs.com/en/api.html#res.json
   try {
+    //creates an empty array in Typescript
     const allEntries: EntryType[] = []
-    //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .collection, .get(), .data()
-    //See the Express.js on .json() http://expressjs.com/en/api.html#res.json
     const querySnapshot = await db.collection('entries').get()
-    querySnapshot.forEach((doc: any) => allEntries.push(doc.data()))
+    //doc is type any as couldn't find the correct type for a Firestore document
+    //To see this return just the entry data without the entryId see commit 5ddd81e600568d03be4917a44742ee363fe8caa4
+    querySnapshot.forEach((doc: any) => {
+      const entryObject = {
+        id: doc.id,
+        ...doc.data()
+      }
+      allEntries.push(entryObject)});
     return res.status(200).json(allEntries)
   } catch(error) { 
     return res.status(500).json(error.message)
