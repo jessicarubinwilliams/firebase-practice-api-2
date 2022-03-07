@@ -1,16 +1,36 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
-## Key Firebase Documentation for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
+## Key Documentation for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
 Suggested way to proceed with the Firebase Docs if trying to learn how to do what this project does: start with these and then work your way out by clicking links that interest you within these articles  
 
 _Important note: I didn't understand the official Firebase documentation nearly as well before watching the tutorial videos below as I did after watching them. If this is all brand new to you, don't stress if the documentation is not initally easy to understand. It will make sense with time and exposure. There are lots of other resouces online to help the very beginner._  
 
+FIREBASE  
+[Get Started with Firebase - Add Firebase to a server](https://firebase.google.com/docs/admin/setup) - This is a tricky one. I used multiple other resources in coordination with this one to find the sytnax that worked for my project.  
+[Firebase CLI reference - Overview](https://firebase.google.com/docs/cli)  
 [Firebase Hosting - Introduction](https://firebase.google.com/docs/hosting)  
 [Firebase Hosting - Get Started](https://firebase.google.com/docs/hosting/quickstart)  
 [Serve dynamic content and host microservices using Firebase Hosting - Overview](https://firebase.google.com/docs/hosting/serverless-overview)  
 [Serve dynamic content and host microservices using Firebase Hosting - Use Cloud Functions for Firebase](https://firebase.google.com/docs/hosting/functions)  
-[Cloud Functions - Call functions via HTTP requests](https://firebase.google.com/docs/functions/http-events)
+[Cloud Functions - Call functions via HTTP requests](https://firebase.google.com/docs/functions/http-events)  
+[Cloud Functions - Write Functions: Manage deployment & runtime options](https://firebase.google.com/docs/functions/manage-functions)  
+
+FIRESTORE
+[Querying data - Getting data](https://cloud.google.com/firestore/docs/query-data/get-data)  
+[Querying data - Querying and filtering](https://cloud.google.com/firestore/docs/query-data/queries)  
+[Querying data - Ordering and limiting](https://cloud.google.com/firestore/docs/query-data/order-limit-data)  
+
+
+If you're wanting to do this in TypeScript instead of JavaScript as I did:  
+[Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript)  
+TYPESCRIPT  
+[Typerscript for JavaScript Programmers in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)  
+
+EXPRESS  
+[Basic Routing](https://expressjs.com/en/starter/basic-routing.html)  
+[Routing](https://expressjs.com/en/guide/routing.html)  
+[express() Methods](https://expressjs.com/en/4x/api.html#express)  
 
 ## Tutorials Used:
 
