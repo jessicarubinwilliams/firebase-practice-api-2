@@ -1,14 +1,14 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
-## Concepts needed to fully understand this project
+## Concepts Needed
 
 * JavaScript
 * RESTful APIs
 * CRUD
 * The general concept of internet protocols
 * HTTP protocol & HTTP Transactions
-* HTTP methods
+* HTTP module
 * HTTP get method query parameters
 * JS window object
 * Node.js
@@ -27,7 +27,41 @@ Suggested way to proceed with the Firebase Docs if trying to learn how to do wha
 
 _Important note: I didn't understand the official Firebase documentation nearly as well before watching the tutorial videos below as I did after watching them. If this is all brand new to you, don't stress if the documentation is not initally easy to understand. It will make sense with time and exposure. There are lots of other resouces online to help the very beginner._  
 
-FIREBASE  
+JAVASCRIPT  
+RESTFUL APIS & CRUD  
+
+JS WINDOW OBJECT  
+[Differences Between the Window and Document for JavaScript Development](https://youtu.be/03WYBVjIMfQ) *Video   
+[Window Object Introduction | Javascript tutorial for beginners | Javascript full course](https://youtu.be/Bg2-9kGGIyw) *Video  
+
+INTERNET PROTOCOLS  
+HTTP PROTOCOL & HTTP TRANSACTIONS  
+HTTP METHODS  
+HTTP GET METHOD QUERY PARAMETERS  
+NODE.JS  
+
+NODE.JS SERVER GLOBAL ENVIRONMENT  
+[Node.js - The Server Global Environment](https://youtu.be/9S4Ko3IF5oA) *Video  
+
+NODE.JS BUILT-IN HTTP MODULE  
+[Node.js - Core Module: http](https://youtu.be/8eyHlxWf4AQ) *Video  
+
+NODE.JS
+
+NODE.JS/EXPRESS.JS REQUEST & RESPONSE OBJECTS  
+[Node.js | Express.js - Request & Response Object in Express](https://youtu.be/TQEdpT6DIKo) *Video  
+[Request object in express](https://youtu.be/S3PJylHxQsE) *Video  
+
+EXPRESS.JS  
+[Express.js - Intro](https://youtu.be/nEVkl--1Rx4) *Video    
+[Express.js - Middleware](https://youtu.be/1_o4BNABaqo) *Video  
+
+EXPRESS.JS ROUTING & app.METHOD  
+[Basic Routing](https://expressjs.com/en/starter/basic-routing.html)  
+[Routing](https://expressjs.com/en/guide/routing.html)  
+[express() Methods](https://expressjs.com/en/4x/api.html#express)  
+
+FIREBASE INCLUDING FIREBASE FUNCTIONS & HOSTING  
 [Get Started with Firebase - Add Firebase to a server](https://firebase.google.com/docs/admin/setup) - This is a tricky one. I used multiple other resources in coordination with this one to find the sytnax that worked for my project.  
 [Firebase CLI reference - Overview](https://firebase.google.com/docs/cli)  
 [Firebase Hosting - Introduction](https://firebase.google.com/docs/hosting)  
@@ -37,34 +71,14 @@ FIREBASE
 [Cloud Functions - Call functions via HTTP requests](https://firebase.google.com/docs/functions/http-events)  
 [Cloud Functions - Write Functions: Manage deployment & runtime options](https://firebase.google.com/docs/functions/manage-functions)  
 
-FIRESTORE  
+FIRESTORE DATABASE  
 [Querying data - Getting data](https://cloud.google.com/firestore/docs/query-data/get-data)  
 [Querying data - Querying and filtering](https://cloud.google.com/firestore/docs/query-data/queries)  
 [Querying data - Ordering and limiting](https://cloud.google.com/firestore/docs/query-data/order-limit-data)  
 
-
-If you're wanting to do this in TypeScript instead of JavaScript as I did:  
-[Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript)  
 TYPESCRIPT  
+[Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript)  
 [Typerscript for JavaScript Programmers in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)  
-
-EXPRESS  
-[Basic Routing](https://expressjs.com/en/starter/basic-routing.html)  
-[Routing](https://expressjs.com/en/guide/routing.html)  
-[express() Methods](https://expressjs.com/en/4x/api.html#express)  
-
-YOUTUBE  
-Understanding the Window Object in JavaScript - In case this is still a little fuzzy for you as it was for me  
-[Differences Between the Window and Document for JavaScript Development](https://youtu.be/03WYBVjIMfQ)  
-[Window Object Introduction | Javascript tutorial for beginners | Javascript full course](https://youtu.be/Bg2-9kGGIyw)  
-
-Understanding Node.js & Express.js - you don't have to fully understand these. But they are a helpful context to have before watching the API building tutorials below. I watched so many more than these below, so don't feel badly if you need to watch more than this to understand how JS/TS, Node.js & Express.js work together.  
-[Node.js - The Server Global Environment](https://youtu.be/9S4Ko3IF5oA)  
-[Node.js - Core Module: http](https://youtu.be/8eyHlxWf4AQ)  
-[Express.js - Intro](https://youtu.be/nEVkl--1Rx4)    
-[Express.js - Middleware](https://youtu.be/1_o4BNABaqo)  
-[Node.js | Express.js - Request & Response Object in Express](https://youtu.be/TQEdpT6DIKo)  
-[Request object in express](https://youtu.be/S3PJylHxQsE)  
 
 ## Tutorials Used:
 
