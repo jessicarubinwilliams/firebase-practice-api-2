@@ -1,6 +1,27 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
+## Concepts needed to fully understand this project
+
+* JavaScript
+* RESTful APIs
+* CRUD
+* The general concept of internet protocols
+* HTTP protocol & HTTP Transactions
+* HTTP methods
+* HTTP get method query parameters
+* JS window object
+* Node.js
+* Node.js server global environment
+* Node.js built-in http module
+* Node.js 
+* Node.js/Express.js request & response objects
+* Express.js
+* Express.js routing & app.METHOD in express
+* Firebase including Firebase functions & hosting
+* Firestore database
+* Typescript
+
 ## Key Documentation & Tutorials for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
 Suggested way to proceed with the Firebase Docs if trying to learn how to do what this project does: start with these and then work your way out by clicking links that interest you within these articles. Skim these before watching the Tutorials but don't expect them to fully make sense until after you've done atleast one if not more of the tutorials.  
 
