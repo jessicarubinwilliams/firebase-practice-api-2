@@ -1,7 +1,7 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
 
-## Key Documentation for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
+## Key Documentation & Tutorials for Understanding building a Serverless API using Firebase Cloud Functions for Hosting & Express.js Middleware
 Suggested way to proceed with the Firebase Docs if trying to learn how to do what this project does: start with these and then work your way out by clicking links that interest you within these articles  
 
 _Important note: I didn't understand the official Firebase documentation nearly as well before watching the tutorial videos below as I did after watching them. If this is all brand new to you, don't stress if the documentation is not initally easy to understand. It will make sense with time and exposure. There are lots of other resouces online to help the very beginner._  
@@ -31,6 +31,18 @@ EXPRESS
 [Basic Routing](https://expressjs.com/en/starter/basic-routing.html)  
 [Routing](https://expressjs.com/en/guide/routing.html)  
 [express() Methods](https://expressjs.com/en/4x/api.html#express)  
+
+YOUTUBE  
+Understanding the Window Object in JavaScript - In case this is still a little fuzzy for you as it was for me  
+[Differences Between the Window and Document for JavaScript Development](https://youtu.be/03WYBVjIMfQ)  
+[48. Window Object Introduction | Javascript tutorial for beginners | Javascript full course](https://youtu.be/Bg2-9kGGIyw)  
+
+Understanding Node.js & Express.js - you don't have to fully understand these. But they are a helpful context to have before watching the API building tutorials below. I watched so many more than these below, so don't feel badly if you need to watch more than this to understand how JS/TS, Node.js & Express.js work together.  
+[Node.js - The Server Global Environment](https://youtu.be/9S4Ko3IF5oA)  
+[Node.js - Core Module: http](https://youtu.be/8eyHlxWf4AQ)  
+[Express.js - Intro](https://youtu.be/nEVkl--1Rx4) - If you watch nothing else I recommend, watch this  
+[Express.js - Middleware](https://youtu.be/1_o4BNABaqo)  - this one is also highly reccommended  
+
 
 ## Tutorials Used:
 
