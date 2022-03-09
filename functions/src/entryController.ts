@@ -27,7 +27,7 @@ const addEntry = async (req: Request, res: Response) => {
       title,
       text
     }
-    
+    //.set() is a Firebase/Firestore method https://firebase.google.com/docs/firestore/manage-data/add-data#web-version-8_2
     await entry.set(entryObject)
     //.send() is an express.js method http://expressjs.com/en/api.html#res.send
     res.status(200).send({
@@ -44,7 +44,7 @@ const addEntry = async (req: Request, res: Response) => {
 // Read
 const getAllEntries = async (req: Request, res: Response) => {
   //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .collection, .get(), .data()
-  //See the Express.js on .json() http://expressjs.com/en/api.html#res.json
+  //See the Express.js documentation on .json() http://expressjs.com/en/api.html#res.json
   try {
     //creates an empty array in Typescript
     const allEntries: EntryType[] = []
