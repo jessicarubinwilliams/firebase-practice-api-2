@@ -10,7 +10,7 @@ const app = express();
 app.use(cors( { origin: true } ));
 
 //Routes
-//Format: app.METHOD(PATH, HANDLER) where `app` is an instance of Express.js (which is built upon & adds functionality to the Node.js built-in html component) and the `HANDLER` is imported from entryController.ts
+//Format: app.METHOD(PATH, HANDLER) where `app` is an instance of Express.js (which is built upon & adds functionality to the Node.js built-in html component) and the `HANDLER` is a function imported from entryController.ts and used as a callback. 
 
 app.get('/', (request, response) => response.status(200).send('Please note this API\'s CRUD routing begins with `api/entries`'))
 
