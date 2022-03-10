@@ -12,7 +12,7 @@ type Request = {
 }
 
 //See Express.js documentation on Basic Routing to understand the syntax of the functions below https://expressjs.com/en/starter/basic-routing.html & https://expressjs.com/en/guide/routing.html
-//All the functions below are handlers that will be exported to index.ts and then inserted into a route
+//All the functions below are handlers that will be exported to index.ts and then inserted into a route. The handlers are custom express.js middleware.
 
 //Create
 const addEntry = async (req: Request, res: Response) => {
