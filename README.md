@@ -8,7 +8,7 @@ To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`
 * CRUD
 * The general concept of internet protocols
 * HTTP protocol & HTTP Transactions
-* HTTP module
+* HTTP methods
 * HTTP get method query parameters
 * JS window object
 * Node.js
