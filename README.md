@@ -27,6 +27,7 @@ Suggested way to proceed with the Firebase Docs if trying to learn how to do wha
 _Important note: I didn't understand the official Firebase documentation nearly as well before watching the tutorial videos below as I did after watching them. If this is all brand new to you, don't stress if the documentation is not initally easy to understand. It will make sense with time and exposure. There are lots of other resouces online to help the very beginner._  
 
 JAVASCRIPT  
+
 RESTFUL APIS & CRUD  
 
 JS WINDOW OBJECT  
@@ -34,10 +35,13 @@ JS WINDOW OBJECT
 [Window Object Introduction | Javascript tutorial for beginners | Javascript full course](https://youtu.be/Bg2-9kGGIyw) *Video  
 
 INTERNET PROTOCOLS  
+
 HTTP PROTOCOL & HTTP TRANSACTIONS  
+[The Http and the Web | Http Explained | Request-Response Cycle](https://youtu.be/eesqK59rhGA)
 [HTTP Transaction explain with real time example | Working of HTTP](https://youtu.be/Nj8pGsBvcmo) *Video  
 
 HTTP METHODS  
+
 HTTP GET METHOD QUERY PARAMETERS  
 [Express JS Tutorial Fast Learn #5 - Query Parameters](https://youtu.be/dqCULpd7OWY) *Video  
 
@@ -50,27 +54,31 @@ NODE.JS SERVER GLOBAL ENVIRONMENT
 
 NODE.JS BUILT-IN HTTP MODULE  
 [Node.js - Core Module: http](https://youtu.be/8eyHlxWf4AQ) *Video  
-[Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/) *Video  
-
-NODE.JS/EXPRESS.JS REQUEST & RESPONSE OBJECTS  
-[Node.js | Express.js - Request & Response Object in Express](https://youtu.be/TQEdpT6DIKo) *Video  
-[Request object in express](https://youtu.be/S3PJylHxQsE) *Video  
+[Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)  
 
 EXPRESS.JS  
 [Express JS - What the Heck is Middleware](https://youtu.be/MIr1oxQ3pao) *Video  
 [Express.js Fundamentals - 6 - Middleware Explained](https://youtu.be/9HOem0amlyg) *Video  
 [Learn Express Middleware In 14 Minutes](https://youtu.be/lY6icfhap2o) *Video  
 [Express.js - Intro](https://youtu.be/nEVkl--1Rx4) *Video    
+
+EXPRESS.JS MIDDLEWARE  
+[Using middleware](https://expressjs.com/en/guide/using-middleware.html) *Express Documentation
 [Express.js - Middleware](https://youtu.be/1_o4BNABaqo) *Video  
 
 EXPRESS.JS ROUTING & app.METHOD  
-[Basic Routing](https://expressjs.com/en/starter/basic-routing.html)  
-[Routing](https://expressjs.com/en/guide/routing.html)  
-[app.METHOD](https://expressjs.com/en/4x/api.html#app.METHOD)
-[express() Methods](https://expressjs.com/en/4x/api.html#express)  
+[Basic Routing](https://expressjs.com/en/starter/basic-routing.html) *Express Documentation  
+[Routing](https://expressjs.com/en/guide/routing.html) *Express Documentation  
+[app.METHOD](https://expressjs.com/en/4x/api.html#app.METHOD) *Express Documentation
+[express() Methods](https://expressjs.com/en/4x/api.html#express) *Express Documentation  
 
-FIREBASE INCLUDING FIREBASE FUNCTIONS & HOSTING  
-[Get Started with Firebase - Add Firebase to a server](https://firebase.google.com/docs/admin/setup) - This is a tricky one. I used multiple other resources in coordination with this one to find the sytnax that worked for my project.  
+NODE.JS/EXPRESS.JS REQUEST & RESPONSE OBJECTS  
+[Node.js | Express.js - Request & Response Object in Express](https://youtu.be/TQEdpT6DIKo) *Video  
+[Request object in express](https://youtu.be/S3PJylHxQsE) *Video  
+[Request](https://expressjs.com/en/api.html#req) *Express Documentation
+
+FIREBASE INCLUDING FIREBASE FUNCTIONS & HOSTING *Firebase Documentation  
+[Get Started with Firebase - Add Firebase to a server](https://firebase.google.com/docs/admin/setup) - I found this to be a tricky one. I used multiple other resources in coordination with this one to find the sytnax that worked for my project.  
 [Firebase CLI reference - Overview](https://firebase.google.com/docs/cli)  
 [Firebase Hosting - Introduction](https://firebase.google.com/docs/hosting)  
 [Firebase Hosting - Get Started](https://firebase.google.com/docs/hosting/quickstart)  
@@ -80,22 +88,21 @@ FIREBASE INCLUDING FIREBASE FUNCTIONS & HOSTING
 [Cloud Functions - Write Functions: Manage deployment & runtime options](https://firebase.google.com/docs/functions/manage-functions)  
 
 FIRESTORE DATABASE  
-[Querying data - Getting data](https://cloud.google.com/firestore/docs/query-data/get-data)  
+[Querying data - Getting data](https://cloud.google.com/firestore/docs/query-data/get-data) *Firestore Documentation  
 [How to read data from Cloud Firestore using get()?](https://medium.com/firebase-tips-tricks/how-to-read-data-from-cloud-firestore-using-get-bf03b6ee4953)  
-[Querying data - Querying and filtering](https://cloud.google.com/firestore/docs/query-data/queries)  
-[Querying data - Ordering and limiting](https://cloud.google.com/firestore/docs/query-data/order-limit-data)  
+[Querying data - Querying and filtering](https://cloud.google.com/firestore/docs/query-data/queries) *Firestore Documentation  
+[Querying data - Ordering and limiting](https://cloud.google.com/firestore/docs/query-data/order-limit-data) *Firestore Documentation  
 
 TYPESCRIPT  
-[Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript)  
-[Typerscript for JavaScript Programmers in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)  
+[Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript) *Firebase Documentation  
+[Typerscript for JavaScript Programmers in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) *Typescript Documentation  
 [React & TypeScript - Course for Beginners](https://www.youtube.com/watch?v=FJDVKeh7RJI) *Video  
 
-## Tutorials Used:
+## Project-Building Tutorials Used:
 
 This project was originally created by more or less following the YouTube tutorial [Build a Serverless API with Firebase cloud functions, TypeScript and Firestore](https://youtu.be/T8SZv6h2WbY). My notes are below. There is also a related [written tutorial](https://blog.logrocket.com/rest-api-firebase-cloud-functions-typescript-firestore/) and [GitHub repo](https://github.com/ebenezerdon/journal-rest-api).  
 
-It was then further developed 
-by following additional YouTube tutorials:  
+It was then further developed by following additional YouTube tutorials:  
 [How to build a REST API with Node js & Express](https://youtu.be/pKd0Rpw7O48) by Programming with Mosh  
 [Firebase Node REST API | Firestore | Babel | REST | API](https://youtu.be/DO-PROnaVwo) by Mahesh Kariya, notes below  
 [Building a RESTful API with Cloud Functions and Firestore](https://youtu.be/XY5WCkgVfPk) by Soren Spangsberg Jorgensen, notes below  
