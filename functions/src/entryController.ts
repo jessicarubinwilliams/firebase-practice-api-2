@@ -9,6 +9,7 @@ type EntryType = {
 type Request = {
   body: EntryType,
   params: { entryId: string }
+  query: { title: string }
 }
 
 //See Express.js documentation on Basic Routing to understand the syntax of the functions below https://expressjs.com/en/starter/basic-routing.html & https://expressjs.com/en/guide/routing.html
@@ -44,21 +45,35 @@ const addEntry = async (req: Request, res: Response) => {
 
 // Read
 const getAllEntries = async (req: Request, res: Response) => {
+  const { title } = req.query
   //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data and https://firebase.google.com/docs/database/web/read-and-write for info on Firebase's .collection, .get(), .data()
   //See the Express.js documentation on .json() http://expressjs.com/en/api.html#res.json
   try {
     //creates an empty array in Typescript
-    const allEntries: EntryType[] = []
-    const querySnapshot = await db.collection('entries').get()
-    //doc is type any as couldn't find the correct type for a Firestore document
-    //To see this return just the entry data without the entryId see commit 5ddd81e600568d03be4917a44742ee363fe8caa4
-    querySnapshot.forEach((doc: any) => {
-      const entryObject = {
-        id: doc.id,
-        ...doc.data()
-      }
-      allEntries.push(entryObject)});
-    return res.status(200).json(allEntries)
+    if (title) {
+      const matchingEntries: EntryType[] = []
+      const q = await db.collection('entries').where("title", "==", title).get();
+      q.forEach((doc: any) => {
+        const entryObject = {
+          id: doc.id,
+          ...doc.data()
+        }
+        matchingEntries.push(entryObject)});
+      return res.status(200).json(matchingEntries)
+    } else {
+      const allEntries: EntryType[] = []
+      const querySnapshot = await db.collection('entries').get()
+      //doc is type any as couldn't find the correct type for a Firestore document
+      //To see this return just the entry data without the entryId see commit 5ddd81e600568d03be4917a44742ee363fe8caa4
+      querySnapshot.forEach((doc: any) => {
+        const entryObject = {
+          id: doc.id,
+          ...doc.data()
+        }
+        allEntries.push(entryObject)});
+      return res.status(200).json(allEntries)
+
+    }
   } catch(error) { 
     return res.status(500).json(error.message)
   }
