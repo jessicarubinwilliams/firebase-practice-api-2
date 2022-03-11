@@ -69,7 +69,7 @@ EXPRESS.JS MIDDLEWARE
 EXPRESS.JS ROUTING & app.METHOD  
 [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) *Express Documentation  
 [Routing](https://expressjs.com/en/guide/routing.html) *Express Documentation  
-[app.METHOD](https://expressjs.com/en/4x/api.html#app.METHOD) *Express Documentation
+[app.METHOD](https://expressjs.com/en/4x/api.html#app.METHOD) *Express Documentation  
 [express() Methods](https://expressjs.com/en/4x/api.html#express) *Express Documentation  
 
 NODE.JS/EXPRESS.JS REQUEST & RESPONSE OBJECTS  
