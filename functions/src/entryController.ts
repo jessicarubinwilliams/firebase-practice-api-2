@@ -90,6 +90,11 @@ const getAllEntries = async (req: Request, res: Response) => {
         }
         matchingEntries.push(entryObject)});
     }
+    //because `req/query` is 
+    //the correct syntax to return the request object's queryString would be:
+    //`return res.status(200).json(req.query)`
+    //However, `return res.status(200).json(req)`
+    //results in a 500 error with the message, "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"
     if (matchingEntries.length === 0) {
       return res.status(200).send("No entries matched the requested criteria")
     } else {
