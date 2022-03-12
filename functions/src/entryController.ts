@@ -35,7 +35,7 @@ const addEntry = async (req: Request, res: Response) => {
     //.set() is a Firebase/Firestore method https://firebase.google.com/docs/firestore/manage-data/add-data#web-version-8_2
     await entry.set(entryObject)
     //.send() is an express.js method http://expressjs.com/en/api.html#res.send
-    res.status(200).send({
+    res.status(201).send({
       status: 'success',
       message: 'entry added succesfully',
       data: entryObject
@@ -93,10 +93,14 @@ const getAllEntries = async (req: Request, res: Response) => {
     //because `req/query` is 
     //the correct syntax to return the request object's queryString would be:
     //`return res.status(200).json(req.query)`
+    //it must be .json and not .send as req.query is a TS object which is only readable in the return if jsonified 
     //However, for reasons I don't yet understand, both `return res.status(200).json(req)` and `return res.status(200).send(req)`
     //results in a 500 error with the message, "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"
     if (matchingEntries.length === 0) {
-      return res.status(200).send("No database document matched the request query string criteria")
+      return res.status(204).json({
+        status: 'success',
+        message: 'No database document matched the request query string criteria'
+      })
     } else {
       return res.status(200).json(matchingEntries)
     }
