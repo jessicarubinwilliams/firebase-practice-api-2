@@ -37,13 +37,13 @@ JS WINDOW OBJECT
 INTERNET PROTOCOLS  
 
 HTTP PROTOCOL & HTTP TRANSACTIONS  
-[The Http and the Web | Http Explained | Request-Response Cycle](https://youtu.be/eesqK59rhGA)
+[The Http and the Web | Http Explained | Request-Response Cycle](https://youtu.be/eesqK59rhGA) *Video  
 [HTTP Transaction explain with real time example | Working of HTTP](https://youtu.be/Nj8pGsBvcmo) *Video  
 
 HTTP METHODS  
 
-HTTP GET METHOD QUERY PARAMETERS  
-[Express JS Tutorial Fast Learn #5 - Query Parameters](https://youtu.be/dqCULpd7OWY) *Video  
+HTTP RESPONSE CODES  
+[HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses) *MDN Documentation  
 
 NODE.JS  
 [What is Node.js Exactly? - a beginners introduction to Nodejs](https://youtu.be/pU9Q6oiQNd0) *Video  
@@ -76,6 +76,13 @@ NODE.JS/EXPRESS.JS REQUEST & RESPONSE OBJECTS
 [Node.js | Express.js - Request & Response Object in Express](https://youtu.be/TQEdpT6DIKo) *Video  
 [Request object in express](https://youtu.be/S3PJylHxQsE) *Video  
 [Request](https://expressjs.com/en/api.html#req) *Express Documentation
+
+HTTP GET METHOD QUERY PARAMETERS  
+[NodeJS For Beginners: Working with Express Http Get Request, Route Params and Query Strings](https://youtu.be/9jXnf8Qmqmg) *Video  
+[Get Query Parameter Input from the Client - Basic Node and Express](https://youtu.be/gFfQXY1lYoM) *Video  
+[Working with Query Strings in Express - Node.js Tutorial 9](https://youtu.be/6vxBzrkLx9A) *Video  
+[Express JS Tutorial Fast Learn #5 - Query Parameters](https://youtu.be/dqCULpd7OWY) *Video  
+[Node js A to Z - Video 24: Route Parameters & Query Strings](https://youtu.be/a7F8nXKD9To) *Video  
 
 FIREBASE INCLUDING FIREBASE FUNCTIONS & HOSTING *Firebase Documentation  
 [Get Started with Firebase - Add Firebase to a server](https://firebase.google.com/docs/admin/setup) - I found this to be a tricky one. I used multiple other resources in coordination with this one to find the sytnax that worked for my project.  
