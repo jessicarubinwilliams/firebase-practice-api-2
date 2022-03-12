@@ -1,5 +1,6 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
+To lint: `practice-api-2/functions$ npm run eslint . --ext .js,.jsx,.ts,.tsx`
 
 ## Concepts Needed
 
@@ -104,6 +105,9 @@ TYPESCRIPT
 [Cloud Functions - Write Functions: Use TypeScript for Cloud Functions](https://firebase.google.com/docs/functions/typescript) *Firebase Documentation  
 [Typerscript for JavaScript Programmers in 5 Minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) *Typescript Documentation  
 [React & TypeScript - Course for Beginners](https://www.youtube.com/watch?v=FJDVKeh7RJI) *Video  
+
+CODE LINTING FOR TYPESCRIPT  
+[https://typescript-eslint.io/](https://typescript-eslint.io/) *TypeScript ESLint Documentation  
 
 ## Project-Building Tutorials Used:
 
