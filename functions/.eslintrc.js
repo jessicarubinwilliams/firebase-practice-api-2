@@ -27,6 +27,7 @@ module.exports = {
   rules: {
     "quotes": ["error", "double"],
     "import/no-unresolved": 0,
+    //max-len is set to 80 in node module eslint-config-google & I don't care about that particular styling
     "max-len": "warn"
   },
 };
