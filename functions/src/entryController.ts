@@ -1,5 +1,5 @@
-import { Response } from 'express';
-import db from './config/firebase';
+import {Response} from "express";
+import db from "./config/firebase";
 
 type EntryType = {
   title: string,
@@ -36,8 +36,8 @@ const addEntry = async (req: Request, res: Response) => {
     await entry.set(entryObject)
     //.send() is an express.js method http://expressjs.com/en/api.html#res.send
     res.status(201).send({
-      status: 'success',
-      message: 'entry added succesfully',
+      status: "success",
+      message: "entry added succesfully",
       data: entryObject
     })
   } catch (error) {
@@ -56,7 +56,7 @@ const getAllEntries = async (req: Request, res: Response) => {
 
     //creates an empty array in Typescript
     if (title && !text) {
-      const q = await db.collection('entries').where("title", "==", title).get();
+      const q = await db.collection("entries").where("title", "==", title).get();
       q.forEach((doc: any) => {
         const entryObject = {
           id: doc.id,
@@ -64,7 +64,7 @@ const getAllEntries = async (req: Request, res: Response) => {
         }
         matchingEntries.push(entryObject)});
     } else if (text && !title) {
-      const q = await db.collection('entries').where("text", "==", text).get();
+      const q = await db.collection("entries").where("text", "==", text).get();
       q.forEach((doc: any) => {
         const entryObject = {
           id: doc.id,
@@ -72,7 +72,7 @@ const getAllEntries = async (req: Request, res: Response) => {
         }
         matchingEntries.push(entryObject)});
      } else if (text && title) {
-      const q = await db.collection('entries').where("title", "==", title).where("text", "==", text).get();
+      const q = await db.collection("entries").where("title", "==", title).where("text", "==", text).get();
       q.forEach((doc: any) => {
         const entryObject = {
           id: doc.id,
@@ -80,7 +80,7 @@ const getAllEntries = async (req: Request, res: Response) => {
         }
         matchingEntries.push(entryObject)});
      } else {
-      const q = await db.collection('entries').get()
+      const q = await db.collection("entries").get()
       //doc is type any as couldn't find the correct type for a Firestore document
       //To see this return just the entry data without the entryId see commit 5ddd81e600568d03be4917a44742ee363fe8caa4
       q.forEach((doc: any) => {
@@ -98,8 +98,8 @@ const getAllEntries = async (req: Request, res: Response) => {
     //results in a 500 error with the message, "Converting circular structure to JSON\n    --> starting at object with constructor 'Socket'\n    |     property 'parser' -> object with constructor 'HTTPParser'\n    --- property 'socket' closes the circle"
     if (matchingEntries.length === 0) {
       return res.status(204).json({
-        status: 'success',
-        message: 'No database document matched the request query string criteria'
+        status: "success",
+        message: "No database document matched the request query string criteria"
       })
     } else {
       return res.status(200).json(matchingEntries)
@@ -113,7 +113,7 @@ const getEntry = async (req: Request, res: Response) => {
   const { params: { entryId } } = req
   try {
 
-    const entry = db.collection('entries').doc(entryId)
+    const entry = db.collection("entries").doc(entryId)
     const querySnapshot = await entry.get();
     const response = {
       id: querySnapshot.id,
@@ -130,7 +130,7 @@ const updateEntry = async (req: Request, res: Response) => {
   const { body: { text, title }, params: { entryId } } = req
   //See Firebase documentation https://firebase.google.com/docs/firestore/query-data/get-data for info on Firebase's .collection(), .doc(), .data(), .set() & .update()
   try {
-    const entry = db.collection('entries').doc(entryId)
+    const entry = db.collection("entries").doc(entryId)
     const currentData = (await entry.get()).data() || {}
     
     const entryObject = {
@@ -140,14 +140,14 @@ const updateEntry = async (req: Request, res: Response) => {
     //Soren Jorgensen tutorial uses .update() instead of .set()
     await entry.set(entryObject).catch(error => {
       return res.status(400).json({
-        status: 'error',
+        status: "error",
         message: error.message
       })
     })
     
     return res.status(200).json({
-      status: 'success',
-      message: 'entry updated successfully',
+      status: "success",
+      message: "entry updated successfully",
       data: entryObject
     })
   }
@@ -161,18 +161,18 @@ const deleteEntry = async (req: Request, res: Response) => {
   const { entryId } = req.params
   //See Firebase documentation for .delete() https://firebase.google.com/docs/firestore/manage-data/delete-data
   try {
-    const entry = db.collection('entries').doc(entryId)
+    const entry = db.collection("entries").doc(entryId)
     
     await entry.delete().catch(error => {
       return res.status(400).json({
-        status: 'error',
+        status: "error",
         message: error.message
       })
     })
     
     return res.status(200).json({
-      status: 'success',
-      message: 'entry deleted successfully'
+      status: "success",
+      message: "entry deleted successfully"
     })
   }
   catch(error) { 
