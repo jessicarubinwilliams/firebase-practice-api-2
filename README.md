@@ -1,6 +1,6 @@
 To run the API on your local server: `$ npm run serve`  
 To deploy the API to Firebase: `practice-api-2/functions$ npm run deploy`  
-To lint: `practice-api-2/functions$ npm run eslint . --ext .js,.jsx,.ts,.tsx`
+To lint: `practice-api-2/functions$ npm run lint`
 
 ## Concepts Needed
 
